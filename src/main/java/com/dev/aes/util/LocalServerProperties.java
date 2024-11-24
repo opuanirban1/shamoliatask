@@ -1,0 +1,10 @@
+package com.dev.aes.util;
+
+import lombok.Data;
+import org.springframework.stereotype.Component;
+
+@Data
+@Component
+public class LocalServerProperties {
+    public String localServerURL;
+}
