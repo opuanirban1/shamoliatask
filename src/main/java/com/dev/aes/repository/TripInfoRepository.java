@@ -1,6 +1,5 @@
 package com.dev.aes.repository;
 
-import com.dev.aes.entity.SysSetting;
 import com.dev.aes.entity.TripInfo;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;

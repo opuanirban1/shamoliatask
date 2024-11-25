@@ -1,6 +1,5 @@
 package com.dev.aes.service.impl;
 
-import com.dev.aes.entity.TransporterInfo;
 import com.dev.aes.entity.TripInfo;
 import com.dev.aes.entity.User;
 import com.dev.aes.payloads.request.AssignTransporterBookRequest;
@@ -9,9 +8,7 @@ import com.dev.aes.repository.TripInfoRepository;
 import com.dev.aes.service.TransporterService;
 import com.dev.aes.service.TripInfoService;
 import com.dev.aes.service.UserService;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

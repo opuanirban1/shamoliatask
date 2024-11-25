@@ -11,10 +11,4 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableConfigurationProperties({
         FileStorageProperties.class
 })
-public class OcrdmsApplication {
-
-    public static void main(String[] args) {
-        SpringApplication.run(OcrdmsApplication.class, args);
-    }
-
-}
+public class MainApplication {public static void main(String[] args) {SpringApplication.run(MainApplication.class, args);}}

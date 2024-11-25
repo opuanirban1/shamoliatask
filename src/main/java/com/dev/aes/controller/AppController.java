@@ -1,6 +1,5 @@
 package com.dev.aes.controller;
 
-import com.dev.aes.entity.DocFile;
 import com.dev.aes.payloads.request.AssignTransporterBookRequest;
 import com.dev.aes.payloads.request.LocationTrackRequest;
 import com.dev.aes.payloads.request.TransporterInserUpdateRequest;
@@ -10,7 +9,6 @@ import com.dev.aes.service.TransporterService;
 import com.dev.aes.service.TripInfoService;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,14 +16,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
 @Slf4j
 @RestController
 @RequestMapping("/api/v1")
 public class AppController {
 
-    private final Logger LOG = LoggerFactory.getLogger(APIController.class);
+    private final Logger LOG = LoggerFactory.getLogger(AppController.class);
 
     @Autowired
     TripInfoService tripInfoService;

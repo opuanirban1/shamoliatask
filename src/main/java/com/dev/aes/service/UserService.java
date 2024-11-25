@@ -4,7 +4,7 @@ import com.dev.aes.entity.User;
 import com.dev.aes.payloads.request.ChangePasswordDto;
 import com.dev.aes.payloads.request.RegisterOrgAdminDto;
 import com.dev.aes.payloads.request.RegisterUserDto;
-import com.dev.aes.payloads.response.FolderShareUserResponseDto;
+//import com.dev.aes.payloads.response.FolderShareUserResponseDto;
 import com.dev.aes.payloads.response.UserResponseDto;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.security.core.Authentication;
@@ -38,7 +38,7 @@ public interface UserService {
 
     void changePasswords(ChangePasswordDto changePasswordDto);
 
-    FolderShareUserResponseDto getFolderShareResponseDto(Long userId);
+    //FolderShareUserResponseDto getFolderShareResponseDto(Long userId);
 
     List<User> getUsersForSearch();
 

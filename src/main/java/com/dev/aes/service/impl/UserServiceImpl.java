@@ -8,7 +8,7 @@ import com.dev.aes.exception.OcrDmsException;
 import com.dev.aes.payloads.request.ChangePasswordDto;
 import com.dev.aes.payloads.request.RegisterOrgAdminDto;
 import com.dev.aes.payloads.request.RegisterUserDto;
-import com.dev.aes.payloads.response.FolderShareUserResponseDto;
+//import com.dev.aes.payloads.response.FolderShareUserResponseDto;
 import com.dev.aes.payloads.response.UserResponseDto;
 import com.dev.aes.repository.PasswordTokenRepository;
 import com.dev.aes.repository.UserRepository;
@@ -201,7 +201,7 @@ public class UserServiceImpl implements UserService {
         update(currentuser);
     }
 
-    @Override
+  /*  @Override
     public FolderShareUserResponseDto getFolderShareResponseDto(Long userId) {
         Optional<User> optionalUser = userRepository.findById(userId);
         if (optionalUser.isPresent()){
@@ -213,7 +213,7 @@ public class UserServiceImpl implements UserService {
                     .build();
         }
         return null;
-    }
+    }*/
 
     @Override
     public List<User> getUsersForSearch() {

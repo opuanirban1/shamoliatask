@@ -11,7 +11,6 @@ import com.dev.aes.repository.UserRepository;
 import com.dev.aes.security.JwtService;
 import com.dev.aes.security.UserDetailsImpl;
 import com.dev.aes.service.AuthenticationService;
-import com.dev.aes.service.FolderService;
 import com.dev.aes.service.RoleService;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,21 +30,22 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     private final AuthenticationManager authenticationManager;
     private final JwtService jwtService;
     private final RoleService roleService;
-    private final FolderService folderService;
+    //private final FolderService folderService;
 
     @Autowired
     public AuthenticationServiceImpl(
             UserRepository userRepository,
             AuthenticationManager authenticationManager,
             PasswordEncoder passwordEncoder,
-            JwtService jwtService, RoleService roleService,
-            FolderService folderService) {
+            JwtService jwtService, RoleService roleService
+           // FolderService folderService
+            ) {
         this.authenticationManager = authenticationManager;
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.jwtService = jwtService;
         this.roleService = roleService;
-        this.folderService = folderService;
+        //this.folderService = folderService;
     }
 
     @Override
@@ -73,7 +73,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         user.setPhoneNo(dto.getPhoneNo());
         user.setRoles(Set.of(roleService.findByName("ROLE_SYSTEM_ADMIN")));
         User saveUser = userRepository.save(user);
-        folderService.createRootFolder(saveUser);
+        //folderService.createRootFolder(saveUser);
         return convertToResponseDto(saveUser);
     }
 

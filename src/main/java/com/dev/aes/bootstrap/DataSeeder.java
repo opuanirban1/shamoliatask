@@ -1,18 +1,6 @@
 package com.dev.aes.bootstrap;
 
-import com.dev.aes.config.APIGatewayManager;
-import com.dev.aes.entity.Role;
-import com.dev.aes.payloads.response.DocTypeResponseDto;
-import com.dev.aes.repository.RoleRepository;
-import com.dev.aes.service.DocTypeFieldService;
-import com.dev.aes.service.DocTypeService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationListener;
-import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
-
-import java.util.Arrays;
-import java.util.List;
 
 @Component
 public class DataSeeder /*implements ApplicationListener<ContextRefreshedEvent>*/{
