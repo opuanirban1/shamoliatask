@@ -53,7 +53,7 @@ public class TripInfo {
     @Column(name = "droplocation")
     private String droplocation;
 
-    @Column(name = "status")
+    @Column(name = "status", columnDefinition = "varchar(255) default 'unassigned '")
     private String status;
 
     @JsonIgnore
