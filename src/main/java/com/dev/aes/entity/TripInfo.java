@@ -15,6 +15,7 @@ import java.time.LocalDateTime;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class TripInfo {
 
     @Id
@@ -22,6 +23,9 @@ public class TripInfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
+
+    @Column(name="customername")
+    private String customername;
 
     @Column(name = "createdat")
     @CreationTimestamp
