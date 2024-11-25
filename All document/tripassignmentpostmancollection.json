@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "d1ae91f1-97ee-45b1-94bf-0e33b83143cb",
+		"name": "TestEncrypt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6501751",
+		"_collection_link": "https://blue-satellite-343134.postman.co/workspace/New-Team-Workspace~f2b2ed74-6f0e-4125-91f0-0353c44f748b/collection/6501751-d1ae91f1-97ee-45b1-94bf-0e33b83143cb?action=share&source=collection_link&creator=6501751"
+	},
+	"item": [
+		{
+			"name": "Register admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"opu.anirban@gmail.com\",\r\n    \"username\": \"opu.anirban@gmail.com\",\r\n    \"address\": \"test\",\r\n    \"phoneNo\": \"0133255429\",\r\n    \"password\": \"Aesl@12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1/auth/signup/system-admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signup",
+						"system-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"opu.anirban@gmail.com\",\n    \"password\": \"Aesl@12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Update Trip",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvcHUuYW5pcmJhbkBnbWFpbC5jb20iLCJpYXQiOjE3MzI1MTA3NjIsImV4cCI6MTczMjc2OTk2Mn0.FdFwMVUNBX7gU3FLCOLILdq9HxjW47NYFM837FkLjJI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 0,\n    \"pickuplocation\": \"new22\",\n    \"pickuplat\": 34.88888882,\n    \"pickuplong\": 34.88888882,\n    \"droplat\": 34.88888882,\n    \"droplong\": 34.88888882,\n    \"droplocation\": \"new22222\",\n    \"status\": \"new2222222222222222222\",\n    \"customername\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1/insertUpdateTripInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"insertUpdateTripInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get All trip info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvcHUuYW5pcmJhbkBnbWFpbC5jb20iLCJpYXQiOjE3MzI1MTA3NjIsImV4cCI6MTczMjc2OTk2Mn0.FdFwMVUNBX7gU3FLCOLILdq9HxjW47NYFM837FkLjJI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 0,\n    \"pickuplocation\": \"new22\",\n    \"pickuplat\": 34.88888882,\n    \"pickuplong\": 34.88888882,\n    \"droplat\": 34.88888882,\n    \"droplong\": 34.88888882,\n    \"droplocation\": \"new22222\",\n    \"status\": \"new2222222222222222222\",\n    \"customername\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1/getAllTripInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"getAllTripInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert update Transporter",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvcHUuYW5pcmJhbkBnbWFpbC5jb20iLCJpYXQiOjE3MzI1MTA3NjIsImV4cCI6MTczMjc2OTk2Mn0.FdFwMVUNBX7gU3FLCOLILdq9HxjW47NYFM837FkLjJI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"email\": \"opu.anirban@gmail.com\",\n    \"name\": \" opu\",\n    \"address\": \"dhaka\",\n    \"phoneno\": \"0133255429\",\n    \"id\":0\n\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1/insertUpdateTransporterInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"insertUpdateTransporterInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert update location track data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvcHUuYW5pcmJhbkBnbWFpbC5jb20iLCJpYXQiOjE3MzI1MTA3NjIsImV4cCI6MTczMjc2OTk2Mn0.FdFwMVUNBX7gU3FLCOLILdq9HxjW47NYFM837FkLjJI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"locationlat\": 32.000000,\n    \"locationlong\": 32.1213123,\n    \"id\":0\n\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1/insertUpdateLocationTrack",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"insertUpdateLocationTrack"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get All Transporter info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvcHUuYW5pcmJhbkBnbWFpbC5jb20iLCJpYXQiOjE3MzI1MTA3NjIsImV4cCI6MTczMjc2OTk2Mn0.FdFwMVUNBX7gU3FLCOLILdq9HxjW47NYFM837FkLjJI"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8090/api/v1/getAllTransporterInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"getAllTransporterInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Transport Book Trip",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvcHUuYW5pcmJhbkBnbWFpbC5jb20iLCJpYXQiOjE3MzI1MTA3NjIsImV4cCI6MTczMjc2OTk2Mn0.FdFwMVUNBX7gU3FLCOLILdq9HxjW47NYFM837FkLjJI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tripid\": 3,\n    \"transporterid\":2 ,\n     \"status\": \"Bokked\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1/assignTransporterBook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"assignTransporterBook"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
